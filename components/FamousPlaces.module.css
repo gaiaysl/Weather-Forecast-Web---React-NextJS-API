@@ -1,0 +1,29 @@
+.places{
+    display:flex;
+    justify-content: center;
+
+
+
+}
+.placeRow{
+    display: flex;
+
+}
+.placesBox{
+    display: flex;
+    text-align: center;
+
+
+}
+.placesImage{
+    display: flex;
+    margin:8px;
+    width: 182px;
+    height: 260px;
+    cursor:pointer;
+}
+.cityName{
+
+    font-weight: bold;
+    cursor:pointer
+}

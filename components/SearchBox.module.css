@@ -1,0 +1,11 @@
+.search{
+    margin:10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: inherit;
+
+}
+
+.search .noresults{
+    padding: 15px 0;
+}

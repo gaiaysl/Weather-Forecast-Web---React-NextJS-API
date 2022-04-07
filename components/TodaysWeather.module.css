@@ -1,0 +1,50 @@
+.today{
+    display: flex;
+    justify-content: center;
+
+}
+.cerc{
+    display: flex;
+}
+
+.cerc .p2{
+    padding-left: 10px;
+    opacity: 70%;
+    font-weight: lighter;
+}
+.todayInner{
+    display: flex;
+    flex-direction:inherit;
+    justify-content: space-around;
+    background-color: #1474cf;
+    width: 757px;
+    height: 250px;
+    text-align: start;
+    padding: 10px;
+    border-radius: 10px;
+    color:#ffffff;
+
+}
+.todayLeftContent{
+    font-size:small ;
+
+}
+
+.todaySunTimes{
+    display: flex;
+}
+.left{
+    margin-right: 15px;
+    letter-spacing: 0.3px;
+}
+.todayRightContent{
+    display: flex;
+    align-items: center;
+
+}
+.todayIconWrapper{
+    display:block;
+    justify-content: center;
+
+
+}
