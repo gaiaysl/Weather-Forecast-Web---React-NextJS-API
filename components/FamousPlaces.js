@@ -22,7 +22,7 @@ const places=[
     {
         name:"Izmir",
         image:IzmirImage,
-        url:"/location/",
+        url:"/location/i̇zmir-311044",
     },
     {
         name:"Antalya",
