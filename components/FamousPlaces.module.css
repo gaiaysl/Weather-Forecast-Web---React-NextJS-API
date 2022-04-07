@@ -1,7 +1,9 @@
 .places{
     display:flex;
     justify-content: center;
+    text-decoration: none;
     flex-wrap: wrap;
+
 
 
 }
