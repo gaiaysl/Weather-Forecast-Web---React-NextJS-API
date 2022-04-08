@@ -6,8 +6,11 @@
 }
 .hourlyInner{
     display: flex;
-    justify-content: space-between;
-    width: 774px;
+    justify-content: center;
+    width: 711px;
+    flex-wrap: wrap;
+    /* overflow: auto; */
+    gap: 4px;
 
 }
 .hourlyBoxWrapper{
@@ -30,7 +33,7 @@
 }
 
 .kart{
-    width: 83px;
+    width: 105px;
     border-radius: 20px;
     background-color: slategray;
 
