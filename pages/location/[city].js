@@ -7,7 +7,7 @@ import HourlyWeather from "../../components/HourlyWeather";
 import SearchBox from "../../components/SearchBox";
 import WeeklyWeather from "../../components/WeeklyWeather";
 import Link from "next/link";
-import styles from "../../pages/index.module.css"
+import styles from "../../pages/location/city.module.css"
 
 
 export async function getServerSideProps(context) {
@@ -79,19 +79,21 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div>
+        <div className={styles.container}>
             <Link href="/">
-                <a className={styles.backLink}>&larr;Home</a>
+                <a className={styles.home}>&larr;Home</a>
             </Link>
-            <SearchBox placeholder="Search for another location..."/>
+
            <Head>
                <title>
                    {city.name} Weather - Next Weather App
                </title>
 
            </Head>
-            <div className={styles.pageWrapper}>
-                <div className={styles.container}>
+            <div className={styles.altContainer}>
+
+                <SearchBox placeholder="Search for another location..."/>
+                <div className={styles.content}>
                     <TodaysWeather
                         city={city}
                         weather={dailyWeather[0]}

@@ -1,29 +1,22 @@
-.places{
-    display:flex;
-    justify-content: center;
+.placesBox{
+    display: flex;
+    flex-direction: column;
+     background-color: deeppink;
 
 
 
 }
 .placeRow{
     display: flex;
-
-}
-.placesBox{
-    display: flex;
-    text-align: center;
-
-
-}
-.placesImage{
-    display: flex;
-    margin:8px;
-    width: 182px;
-    height: 260px;
-    cursor:pointer;
+    flex-direction: row;
+    gap:10px;
+    background-color: black;
 }
 .cityName{
+    background-color: #1474cf;
 
-    font-weight: bold;
-    cursor:pointer
+}
+.resim{
+    width: 200px;
+    height: 250px;
 }

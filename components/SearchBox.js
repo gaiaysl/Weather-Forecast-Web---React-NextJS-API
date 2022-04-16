@@ -1,6 +1,5 @@
 import React from "react";
 import cities from "../lib/city.list.json"
-import Link from "next/link";
 import Router from 'next/router';
 import styles from '../components/SearchBox.module.css'
 
@@ -55,17 +54,17 @@ export default function SearchBox({placeholder}){
                    placeholder={placeholder ? placeholder :""}/>
 
             {query.length > 3 && (
-                <ul>
+                <ul className={styles.cityList}>
                     {results.length > 0 ? (
                         results.map((city) =>(
-                            <li key = {city.slug}>
-                                <Link href ={` /location/${city.slug}`}>
-                                    <a>
+                            <li className={styles.cityName}>
+                                    <a
+                                        href ={`/location/${city.slug}`}
+                                        className={styles.citySlug}>
                                         {city.name}
                                         {city.state ? `,${city.state}` : ""}{" "}
                                         <span>({city.country})</span>
                                     </a>
-                                </Link>
                             </li>
                         ))
                     ) : (

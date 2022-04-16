@@ -2,10 +2,30 @@
     margin:10px;
     justify-content: center;
     display: flex;
-    flex-direction: inherit;
+    flex-direction: column;
+}
+.cityList{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.cityName{
+    margin-right: 10px;
 
 }
 
-.search .noresults{
+.citySlug{
+    background-color: darkgreen;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.noresults{
     padding: 15px 0;
 }

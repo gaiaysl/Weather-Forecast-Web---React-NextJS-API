@@ -32,31 +32,25 @@ const places=[
 ]
 export default function FamousPlaces() {
     return (
-        <div className={styles.places}>
+
             <div className={styles.placeRow}>
                 {places.length > 0 &&
                     places.map((place, index) =>(
                         <div className={styles.placesBox} key={index}>
-                            <Link href={place.url}>
-                                <a>
-                                    <div className={styles.placesImage}>
-
+                                <a href={place.url}>
                                       <Image
-
+                                         className={styles.resim}
                                           src={place.image}
                                           alt={`${place.name} Image`}
                                           objectFit="cover"
                                       />
-
-                                    </div>
-                                    <span className={styles.cityName}>{place.name}</span>
                                 </a>
-                            </Link>
+                            <p className={styles.cityName}>{place.name}</p>
                         </div>
                         ))
                 }
             </div>
-        </div>
+
     );
 }
 

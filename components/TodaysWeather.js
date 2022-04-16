@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import Image from "next/image";
 import styles from '../components/TodaysWeather.module.css'
 
 
