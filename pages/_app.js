@@ -1,4 +1,4 @@
-import "../styles/app.css";
+import "../styles/app.scss";
 import React from 'react';
 import Router from "next/router";
 import NProgress from 'nprogress'

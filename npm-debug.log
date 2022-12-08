@@ -1,30 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'run',
-1 verbose cli   'dev' ]
-2 info using npm@1.4.28
-3 info using node@v0.10.33
-4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose run-script [ 'predev', 'dev', 'postdev' ]
-6 info predev weater-forecast-web@1.0.0
-7 info dev weater-forecast-web@1.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info weater-forecast-web@1.0.0 Failed to exec dev script
-10 error weater-forecast-web@1.0.0 dev: `next dev`
-10 error Exit status 8
-11 error Failed at the weater-forecast-web@1.0.0 dev script.
-11 error This is most likely a problem with the weater-forecast-web package,
-11 error not with npm itself.
-11 error Tell the author that this fails on your system:
-11 error     next dev
-11 error You can get their info via:
-11 error     npm owner ls weater-forecast-web
-11 error There is likely additional logging output above.
-12 error System Windows_NT 6.2.9200
-13 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
-14 error cwd C:\Users\gayey\OneDrive\Belgeler\GitHub\Weather-Forecast-Web---React-NextJS-API
-15 error node -v v0.10.33
-16 error npm -v 1.4.28
-17 error code ELIFECYCLE
-18 verbose exit [ 1, true ]
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\gayey\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'tailwindcss',
+1 verbose cli   'postcss',
+1 verbose cli   'autoprefixer'
+1 verbose cli ]
+2 info using npm@3.10.10
+3 info using node@v17.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 verbose stack TypeError: cb.apply is not a function
+7 verbose stack     at C:\Users\gayey\AppData\Roaming\npm\node_modules\npm\node_modules\graceful-fs\polyfills.js:267:18
+7 verbose stack     at FSReqCallback.oncomplete (node:fs:199:5)
+8 verbose cwd C:\Users\gayey\OneDrive\Belgeler\GitHub\Weather-Forecast-Web---React-NextJS-API
+9 error Windows_NT 10.0.19044
+10 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\gayey\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "tailwindcss" "postcss" "autoprefixer"
+11 error node v17.4.0
+12 error npm  v3.10.10
+13 error cb.apply is not a function
+14 error If you need help, you may report this error at:
+14 error     <https://github.com/npm/npm/issues>
+15 verbose exit [ 1, true ]

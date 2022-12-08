@@ -79,7 +79,7 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div className={styles.deneme}>
+        <div className="bg-purple-500">
             <Link legacyBehavior href="/">
                 <a className={styles.backLink}>&larr;Home</a>
             </Link>

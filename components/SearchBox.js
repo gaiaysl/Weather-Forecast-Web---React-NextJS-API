@@ -2,7 +2,7 @@ import React from "react";
 import cities from "../lib/city.list.json"
 import Link from "next/link";
 import Router from 'next/router';
-import styles from '../components/SearchBox.module.css'
+
 
 export default function SearchBox({placeholder}){
     const [query,setQuery] = React.useState("");
@@ -49,13 +49,14 @@ export default function SearchBox({placeholder}){
     };
 
     return (
-        <div className={styles.search}>
+        <div className="mt-56 px-4">
             <input type="text" value={query}
                    onChange={onChange}
-                   placeholder={placeholder ? placeholder :""}/>
+                   placeholder={placeholder ? placeholder :""}
+                   className="p-2 rounded-2xl text-center border-2 border-black w-full " />
 
             {query.length > 3 && (
-                <ul>
+                <ul className="resultcontainer">
                     {results.length > 0 ? (
                         results.map((city) =>(
                             <li key = {city.slug}>
@@ -69,7 +70,7 @@ export default function SearchBox({placeholder}){
                             </li>
                         ))
                     ) : (
-                        <li className={styles.noresults}>No results found</li>
+                        <li>No results found</li>
                     ) }
                 </ul>
             )}

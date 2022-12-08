@@ -33,22 +33,19 @@ const places=[
 export default function FamousPlaces() {
     return (
     
-        <div className={styles.places}>
-            <div className={styles.dive}>
-                    <div className={styles.container}>
-                    <SearchBox placeholder="Search for a city..."/>
-                    </div>
-                    <div className={styles.placeRow}>
+        <div>
+            <div className="mt-2">
+                   
+                    <div className="imageContainer grid grid-cols-2 sm:grid-cols-4 sm:gap-2 mt-12 ">
           
                         {places.length > 0 &&
                         places.map((place, index) =>(
-                        <div className={styles.placesBox} key={index}>
-                            <Link legacyBehaviornk href={place.url}>
+                        <div className="places" key={index}>
+                            <Link legacyBehavior href={place.url}>
                           
-                                    <div  >
-
+                                    <div className="hover:scale-105 transition-all ease-in duration-400 hover:shadow-2xl text-center p-2 cursor-pointer flex flex-col items-center justify-center">
                                       <Image
-                                       className={styles.placesImage}
+                                       className="w-64 h-64 "
                                           src={place.image}
                                           alt={`${place.name} Image`}
                                           objectFit="cover"
@@ -56,7 +53,7 @@ export default function FamousPlaces() {
 
                                     
                                     
-                                    <span className={styles.cityName}>{place.name}</span>
+                                    <span className="">{place.name}</span>
                                     </div>
                             </Link>
                         </div>
