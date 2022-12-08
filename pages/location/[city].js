@@ -79,8 +79,8 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div>
-            <Link href="/">
+        <div className={styles.deneme}>
+            <Link legacyBehavior href="/">
                 <a className={styles.backLink}>&larr;Home</a>
             </Link>
             <SearchBox placeholder="Search for another location..."/>

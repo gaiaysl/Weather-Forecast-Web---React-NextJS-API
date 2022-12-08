@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import styles from '../components/FamousPlaces.module.css'
-
+import SearchBox from './SearchBox';
 import IstanbulImage from "../public/Images/Istanbul.jpg"
 import AnkaraImage from "../public/Images/Ankara.jpg"
 import IzmirImage from "../public/Images/Izmir.jpg"
@@ -32,29 +32,37 @@ const places=[
 ]
 export default function FamousPlaces() {
     return (
+    
         <div className={styles.places}>
-            <div className={styles.placeRow}>
-                {places.length > 0 &&
-                    places.map((place, index) =>(
+            <div className={styles.dive}>
+                    <div className={styles.container}>
+                    <SearchBox placeholder="Search for a city..."/>
+                    </div>
+                    <div className={styles.placeRow}>
+          
+                        {places.length > 0 &&
+                        places.map((place, index) =>(
                         <div className={styles.placesBox} key={index}>
-                            <Link href={place.url}>
-                                <a>
-                                    <div className={styles.placesImage}>
+                            <Link legacyBehaviornk href={place.url}>
+                          
+                                    <div  >
 
                                       <Image
-
+                                       className={styles.placesImage}
                                           src={place.image}
                                           alt={`${place.name} Image`}
                                           objectFit="cover"
                                       />
 
-                                    </div>
+                                    
+                                    
                                     <span className={styles.cityName}>{place.name}</span>
-                                </a>
+                                    </div>
                             </Link>
                         </div>
                         ))
                 }
+                    </div>
             </div>
         </div>
     );

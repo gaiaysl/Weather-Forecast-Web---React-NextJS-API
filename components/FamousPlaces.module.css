@@ -1,29 +1,67 @@
 .places{
-    display:flex;
-    justify-content: center;
 
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
 
-
+    
+  
+}
+.container{
+    background-color: black;
+    margin-bottom: 20px;
+  
+   
 }
 .placeRow{
-    display: flex;
 
-}
-.placesBox{
     display: flex;
+    flex-direction: row;
     text-align: center;
+   gap:2px;
 
-
+   
 }
+
 .placesImage{
-    display: flex;
-    margin:8px;
-    width: 182px;
-    height: 260px;
-    cursor:pointer;
-}
-.cityName{
+    height: 228px;
+   
+ }
+ @media screen and (max-width:500px),screen and (max-device-width:500px) {
+    .container{
+        background-color: black;
+        margin-bottom: 20px;
+      
+       
+    }
+    .placeRow{
 
-    font-weight: bold;
-    cursor:pointer
-}
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+       gap:2px;
+       width: 380px;
+      
+      
+    }
+    .placesBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        overflow: hidden;
+        object-fit: cover;
+  
+    
+        
+    }
+    .placesImage{
+        height: 200px;
+      
+       
+     }
+    }
+    
+ 

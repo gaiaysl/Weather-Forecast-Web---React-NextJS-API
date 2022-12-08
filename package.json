@@ -17,7 +17,7 @@
     "dotenv": "^16.0.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
-    "next": "^12.1.4",
+    "next": "^13.0.7-canary.3",
     "nprogress": "^0.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
