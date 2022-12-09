@@ -13,7 +13,7 @@ export default function Home() {
             
         
             
-            <div className="max-w-4xl mx-auto ">   
+            <div className=" max-w-4xl mx-auto ">   
             <DarkMode/>
                 <SearchBox placeholder="Search for a city..."/>          
                 <FamousPlaces />  
