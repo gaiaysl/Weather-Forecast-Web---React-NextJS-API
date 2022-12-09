@@ -7,7 +7,7 @@ import HourlyWeather from "../../components/HourlyWeather";
 import SearchBox from "../../components/SearchBox";
 import WeeklyWeather from "../../components/WeeklyWeather";
 import Link from "next/link";
-
+import DarkMode from "../../components/DarkMode"
 
 
 export async function getServerSideProps(context) {
@@ -79,14 +79,19 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div className="bg-gradient-to-r from-purple-200 to-blue-200  ">
+        <div className=" dark:from-gray-700 dark:bg-gradient-to-r dark:to-blue-200 bg-gradient-to-r from-purple-200 to-blue-200  ">
+
             &larr;
             <Link legacyBehavior href="/">
              <button className=" border-2 border-gray-500 rounded-xl p-1 hover: transition-all ease-in duration-400 text-sm hover:text-base hover:shadow-2xl hover:cursor-pointer ">
                 <a >Home </a> 
                 </button>
             </Link>
-           <div className="max-w-4xl mx-auto ">
+           
+           <div className="max-w-4xl mx-auto -mt-8 ">
+           
+           <DarkMode/>
+          
             <SearchBox placeholder="Search for another location..."/>
             </div>
          
@@ -96,7 +101,8 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
                </title>
 
            </Head>
-            <div className="flex flex-col">
+            <div className="  flex flex-col">
+           
                 <div className="  ">
                     <TodaysWeather
                         city={city}

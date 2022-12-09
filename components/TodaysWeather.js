@@ -9,7 +9,7 @@ export default function TodaysWeather({city,weather,timezone}) {
 
         return (
            <div className=" max-w-4xl mx-auto flex items-center mt-4  ">
-               <div className=" mx-auto  flex  w-full  h-96 rounded-lg  opacity-90 backdrop-blur-md  hover:backdrop-blur-2xl shadow-2xl   m-3  rounded-2xl border-2 border-blue-100">
+               <div className=" mx-auto  flex  w-full  h-96 rounded-lg  opacity-90 backdrop-blur-md  hover:backdrop-blur-2xl shadow-2xl   m-3  rounded-2xl border-2 border-white">
                    <div className=" flex flex-col mx-auto w-96  mt-20 py-2  ">
                        <h1 className='font-bold'>
                            {city.name} ({city.country})

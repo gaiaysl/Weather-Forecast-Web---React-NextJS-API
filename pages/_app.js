@@ -2,6 +2,7 @@ import "../styles/app.scss";
 import React from 'react';
 import Router from "next/router";
 import NProgress from 'nprogress'
+import {ThemeProvider} from 'next-themes'
 function MyApp({ Component ,pageProps}) {
     React.useEffect(() =>{
         const start =() => NProgress.start();
@@ -20,7 +21,17 @@ function MyApp({ Component ,pageProps}) {
         }
          
     }, [])
-    return <Component {...pageProps} />;
+    return( 
+    
+    
+        <ThemeProvider attribute='class'>
+        <Component {...pageProps} />
+        </ThemeProvider>
+        )
+       
+   
+    
+    
 
 }
 
