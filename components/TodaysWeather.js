@@ -8,20 +8,20 @@ export default function TodaysWeather({city,weather,timezone}) {
 
 
         return (
-           <div className="  flex items-center mt-4 text-white ">
-               <div className=" mx-auto bg-blue-500 flex w-3/4  h-96 rounded-lg ">
+           <div className=" max-w-4xl mx-auto flex items-center mt-4  ">
+               <div className=" mx-auto  flex  w-full  h-96 rounded-lg  opacity-90 backdrop-blur-md  hover:backdrop-blur-2xl shadow-2xl   m-3  rounded-2xl border-2 border-blue-100">
                    <div className=" flex flex-col mx-auto w-96  mt-20 py-2  ">
                        <h1 className='font-bold'>
                            {city.name} ({city.country})
                        </h1>
                        <h2>
-                           <div className="flex flex-row mt-10  ">
+                           <div className="flex flex-row mt-10   ">
                            <p className="m-2 font-bold ">{weather.temp.max.toFixed(0)}&deg;C</p>
 
                            <p className="m-2 ml-6">{weather.temp.min.toFixed(0)}&deg;C</p>
                            </div>
                        </h2>
-                       <div className="flex flex-row  ">
+                       <div className="flex flex-row text-white ">
                             <div className="m-2  ">
                             <p>Sunrise</p>
                             <span className='text-sm'>{moment.unix(weather.sunrise).tz(timezone).format("LT")}</span>
@@ -34,7 +34,7 @@ export default function TodaysWeather({city,weather,timezone}) {
                    </div>
 
                    <div className=" flex flex-col items-center mx-auto ">
-                       <div className=" mt-20 font-bold">
+                       <div className=" mt-20 font-bold text-white">
 
                            <img
                                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}

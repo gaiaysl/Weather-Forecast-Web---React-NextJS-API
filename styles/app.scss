@@ -66,3 +66,30 @@ html{
       }
     }
   }
+
+
+  .cardContainer{
+    flex-flow: row nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    ::-webkit-scrollbar {
+      width: 10px !important;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1 !important;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888 !important;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555 !important;
+    }
+  }

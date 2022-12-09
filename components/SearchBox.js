@@ -49,7 +49,7 @@ export default function SearchBox({placeholder}){
     };
 
     return (
-        <div className="mt-56 px-4">
+        <div className="mt-56 ">
             <input type="text" value={query}
                    onChange={onChange}
                    placeholder={placeholder ? placeholder :""}

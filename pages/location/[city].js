@@ -79,15 +79,16 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div className="bg-gradient-to-r from-purple-200 to-blue-200 ">
+        <div className="bg-gradient-to-r from-purple-200 to-blue-200  ">
             &larr;
             <Link legacyBehavior href="/">
              <button className=" border-2 border-gray-500 rounded-xl p-1 hover: transition-all ease-in duration-400 text-sm hover:text-base hover:shadow-2xl hover:cursor-pointer ">
                 <a >Home </a> 
                 </button>
             </Link>
-           
+           <div className="max-w-4xl mx-auto ">
             <SearchBox placeholder="Search for another location..."/>
+            </div>
          
            <Head>
                <title>
@@ -104,8 +105,10 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
                     />
                 
                 </div>
+                <div>
                 <HourlyWeather hourlyWeather={hourlyWeather} timezone={timezone}/>
                     <WeeklyWeather weeklyWeather={dailyWeather}  timezone={timezone}/>
+                    </div>
             </div>
         </div>
     );
