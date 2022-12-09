@@ -4,10 +4,10 @@ import styles from '../components/WeeklyWeather.module.css'
 
 export default function WeeklyWeather({weeklyWeather,timezone}) {
     return (
-      <div className={styles.weekly}>
-          <div className={styles.weeklyTitle}>
-             <h2>Weekly</h2>
-              <h5>Weather</h5>
+      <div className="  w-3/4  mx-auto">
+          <div className=" flex flex-row w-36 m-4 mt-4  ">
+             <h2 className='font-bold text-3xl m-1 '>Weekly</h2>
+              <h5 className='text-xl mt-3 m-1'>Weather</h5>
           </div>
 
 
@@ -18,9 +18,9 @@ export default function WeeklyWeather({weeklyWeather,timezone}) {
 
           }
           return(
-              <div className={styles.container}>
-                  <div className={styles.left}>
-                      <div className={styles.leftOne}>
+              <div className="bg-blue-500 m-3  rounded-2xl  text-white flex flex-row justify-between">
+                  <div className="bg-gray-500 w-48 rounded-2xl  flex flex-row items-center w-36">
+                      <div className=" text-center mx-auto ">
                         <h3>
                             {moment.unix(weather.dt).tz(timezone).format("dddd")}
                         </h3>
@@ -29,8 +29,11 @@ export default function WeeklyWeather({weeklyWeather,timezone}) {
                             <p>{weather.temp.min.toFixed(0)}&deg;C</p>
 
                       </div>
-                            <div className={styles.leftTwo}>
-                                <div className={styles.sun1}>
+                           
+
+                  </div>
+                  <div className=" py-2 flex flex-col w-36 h-36 text-center  ">
+                                <div className="py-2 ">
                                 <h3>Sunrise</h3>
                                 <p>
                                     {moment.unix(weather.sunrise).tz(timezone).format("LT")}
@@ -43,13 +46,11 @@ export default function WeeklyWeather({weeklyWeather,timezone}) {
                                 </p>
                                 </div>
                             </div>
-
-                  </div>
-                  <div className={styles.right}>
+                  <div className=" w-36 h-36 flex flex-col items-center rounded-2xl ">
                       <img
                           src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                           alt="Weather Icon"
-                          layout="fill"
+                         
                       />
                       <p>{weather.weather[0].description}</p>
                   </div>

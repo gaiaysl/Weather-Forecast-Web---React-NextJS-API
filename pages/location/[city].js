@@ -7,7 +7,7 @@ import HourlyWeather from "../../components/HourlyWeather";
 import SearchBox from "../../components/SearchBox";
 import WeeklyWeather from "../../components/WeeklyWeather";
 import Link from "next/link";
-import styles from "../../pages/index.module.css"
+
 
 
 export async function getServerSideProps(context) {
@@ -79,28 +79,33 @@ export default function City({hourlyWeather, currentWeather, dailyWeather, city,
 
     return (
 
-        <div className="bg-purple-500">
+        <div className="bg-gradient-to-r from-purple-200 to-blue-200 ">
+            &larr;
             <Link legacyBehavior href="/">
-                <a className={styles.backLink}>&larr;Home</a>
+             <button className=" border-2 border-gray-500 rounded-xl p-1 hover: transition-all ease-in duration-400 text-sm hover:text-base hover:shadow-2xl hover:cursor-pointer ">
+                <a >Home </a> 
+                </button>
             </Link>
+           
             <SearchBox placeholder="Search for another location..."/>
+         
            <Head>
                <title>
                    {city.name} Weather - Next Weather App
                </title>
 
            </Head>
-            <div className={styles.pageWrapper}>
-                <div className={styles.container}>
+            <div className="flex flex-col">
+                <div className="  ">
                     <TodaysWeather
                         city={city}
                         weather={dailyWeather[0]}
                         timezone={timezone}
                     />
-                    <HourlyWeather hourlyWeather={hourlyWeather} timezone={timezone}/>
-                    <WeeklyWeather weeklyWeather={dailyWeather}  timezone={timezone}/>
-
+                
                 </div>
+                <HourlyWeather hourlyWeather={hourlyWeather} timezone={timezone}/>
+                    <WeeklyWeather weeklyWeather={dailyWeather}  timezone={timezone}/>
             </div>
         </div>
     );
