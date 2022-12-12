@@ -7,13 +7,11 @@ html{
 
   }
   body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background:linear-gradient(90deg, rgba(176,201,207,100) 0%, rgba(219,219,233,100) 35%, rgba(211,223,226,100) 100%);
+   @apply
+   dark:from-gray-500 dark:bg-gradient-to-r dark:to-gray-700 bg-gradient-to-r from-gray-100 to-blue-100
   }
 
+  
   .resultcontainer {
     z-index: 200;
     margin-top: 1rem;

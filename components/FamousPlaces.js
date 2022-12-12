@@ -34,7 +34,7 @@ export default function FamousPlaces() {
     return (
     
         <div>
-            <div className="mt-2">
+            <div className="mt-2 ">
                    
                     <div className="imageContainer grid grid-cols-2 sm:grid-cols-4 sm:gap-2 mt-12 ">
           
